@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Map Example</title>
+    <style>
+        /* Basic styling for the map */
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h3>My Google Map</h3>
+    <!-- Div where the map will be loaded -->
+    <div id="map"></div>
+
+    <!-- Script to load Google Maps API -->
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+
+    <script>
+        // JavaScript to initialize the map
+        function initMap() {
+            // Location for the marker (coordinates for Pretoria, South Africa)
+            const location = { lat: -25.746111, lng: 28.188056 };
+
+            // Create a new map centered on the location
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: location
+            });
+
+            // Custom icon for the marker
+            const icon = {
+                url: 'https://example.com/custom-marker.png', // replace with the actual icon URL
+                scaledSize: new google.maps.Size(40, 40) // Adjust the size as needed
+            };
+
+            // Add a marker with the custom icon
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                icon: icon,
+                title: 'Alkantrant Library'
+            });
+        }
+    </script>
+</body>
+</html>
