@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Tshwane Facility Connector - Sign Up</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Nav Bar Start -->
+<div class="nav">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <a href="#" class="navbar-brand">MENU</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav mr-auto">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="product-list.html" class="nav-item nav-link">Public Facility</a>
+                    <a href="product-detail.html" class="nav-item nav-link">About Facility</a>
+                    <a href="checkout.html" class="nav-item nav-link">Checkout</a>
+                    <a href="my-account.html" class="nav-item nav-link">My Account</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Nav Bar End -->
+
+<!-- Signup Start -->
+<div class="signup">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="signup-form">
+                    <h2>Sign Up</h2>
+                    <div class="row">
+                        <div class="row">
+                            <!-- First Name Field -->
+                            <div class="col-md-6">
+                                <label for="first-name">First Name</label>
+                                <input class="form-control" id="signup-first-name" type="text" placeholder="First Name" 
+                                       pattern="[A-Za-z]+" title="Please enter letters only." required 
+                                       oninput="validateFirstName()">
+                                <div id="first-name-error" class="text-danger"></div>
+                            </div>
+                        
+                            <!-- Last Name Field -->
+                            <div class="col-md-6">
+                                <label for="last-name">Last Name</label>
+                                <input class="form-control" id="signup-last-name" type="text" placeholder="Last Name" 
+                                       pattern="[A-Za-z]+" title="Please enter letters only." required 
+                                       oninput="validateLastName()">
+                                <div id="last-name-error" class="text-danger"></div>
+                            </div>
+                        
+                            <!-- Email Field -->
+                            <div class="col-md-6">
+                                <label for="email">E-mail</label>
+                                <input class="form-control" id="signup-email" type="email" placeholder="Your E-mail" 
+                                       pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
+                                       title="Please enter a valid email address (e.g., name@example.com)" required 
+                                       oninput="validateEmail()">
+                                <div id="email-error" class="text-danger"></div>
+                            </div>
+                        
+                            <!-- Mobile Number Field -->
+                            <div class="col-md-6">
+                                <label for="mobile">Mobile Number</label>
+                                <input class="form-control" id="signup-mobile" type="tel" placeholder="Your Mobile Number" 
+                                       pattern="^[0-9]{10}$" title="Please enter a valid 10-digit mobile number." required 
+                                       oninput="validateMobile()">
+                                <div id="mobile-error" class="text-danger"></div>
+                            </div>
+                        
+                            <!-- Password Field -->
+                            <div class="col-md-6">
+                                <label for="password">Password</label>
+                                <input class="form-control" id="signup-password" type="password" placeholder="Create Password" 
+                                       minlength="8" required oninput="validatePassword()">
+                                <div id="password-error" class="text-danger"></div>
+                            </div>
+                        
+                            <!-- Confirm Password Field -->
+                            <div class="col-md-6">
+                                <label for="repassword">Retype Password</label>
+                                <input class="form-control" id="signup-repassword" type="password" placeholder="Confirm Password" 
+                                       minlength="8" required oninput="validateConfirmPassword()">
+                                <div id="confirm-password-error" class="text-danger"></div>
+                            </div>
+                        
+                            <!-- Submit Button -->
+                            <div class="col-md-12">
+                                <button class="btn btn-primary btn-block" type="button" onclick="validateForm()">Submit</button>
+                                <div class="message" id="signup-message"></div>
+                            </div>
+                        </div>
+                        
+                        <script>
+                            // Validation for First Name
+                            function validateFirstName() {
+                                const firstName = document.getElementById('signup-first-name');
+                                const errorDiv = document.getElementById('first-name-error');
+                                if (!firstName.checkValidity()) {
+                                    errorDiv.innerHTML = "Please enter letters only.";
+                                } else {
+                                    errorDiv.innerHTML = "";
+                                }
+                            }
+                        
+                            // Validation for Last Name
+                            function validateLastName() {
+                                const lastName = document.getElementById('signup-last-name');
+                                const errorDiv = document.getElementById('last-name-error');
+                                if (!lastName.checkValidity()) {
+                                    errorDiv.innerHTML = "Please enter letters only.";
+                                } else {
+                                    errorDiv.innerHTML = "";
+                                }
+                            }
+                        
+                            // Validation for Email
+                            function validateEmail() {
+                                const email = document.getElementById('signup-email');
+                                const errorDiv = document.getElementById('email-error');
+                                if (!email.checkValidity()) {
+                                    errorDiv.innerHTML = "Please enter a valid email address (e.g., name@example.com).";
+                                } else {
+                                    errorDiv.innerHTML = "";
+                                }
+                            }
+                        
+                            // Validation for Mobile Number
+                            function validateMobile() {
+                                const mobile = document.getElementById('signup-mobile');
+                                const errorDiv = document.getElementById('mobile-error');
+                                if (!mobile.checkValidity()) {
+                                    errorDiv.innerHTML = "Please enter a valid 10-digit mobile number.";
+                                } else {
+                                    errorDiv.innerHTML = "";
+                                }
+                            }
+                        
+                            // Validation for Password
+                            function validatePassword() {
+                                const password = document.getElementById('signup-password');
+                                const errorDiv = document.getElementById('password-error');
+                                if (password.value.length < 8) {
+                                    errorDiv.innerHTML = "Password must be at least 8 characters.";
+                                } else {
+                                    errorDiv.innerHTML = "";
+                                }
+                            }
+                        
+                            // Validation for Confirm Password
+                            function validateConfirmPassword() {
+                                const password = document.getElementById('signup-password').value;
+                                const confirmPassword = document.getElementById('signup-repassword');
+                                const errorDiv = document.getElementById('confirm-password-error');
+                                if (confirmPassword.value !== password) {
+                                    errorDiv.innerHTML = "Passwords do not match.";
+                                } else {
+                                    errorDiv.innerHTML = "";
+                                }
+                            }
+                        
+                            // Function to validate the entire form
+                            function validateForm() {
+                                validateFirstName();
+                                validateLastName();
+                                validateEmail();
+                                validateMobile();
+                                validatePassword();
+                                validateConfirmPassword();
+                        
+                                const firstNameValid = document.getElementById('signup-first-name').checkValidity();
+                                const lastNameValid = document.getElementById('signup-last-name').checkValidity();
+                                const emailValid = document.getElementById('signup-email').checkValidity();
+                                const mobileValid = document.getElementById('signup-mobile').checkValidity();
+                                const passwordValid = document.getElementById('signup-password').checkValidity();
+                                const confirmPasswordValid = document.getElementById('signup-repassword').checkValidity();
+                        
+                                if (firstNameValid && lastNameValid && emailValid && mobileValid && passwordValid && confirmPasswordValid) {
+                                    document.getElementById('signup-message').innerHTML = '<div class="alert alert-success">Form submitted successfully!</div>';
+                                } else {
+                                    document.getElementById('signup-message').innerHTML = '<div class="alert alert-danger">Please fill out all required fields correctly.</div>';
+                                }
+                            }
+                        </script>
+                        
+                        <div class="col-md-12 mt-3 text-center">
+                            <p>Already have an account? <a href="login.html">Login Here</a></p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Signup End -->
+
+<script>
+    const users = [
+        { username: 'admin', password: 'admin123', email: 'admin@admin.com' },
+        { username: 'user', password: 'user123', email: 'user@user.com' }
+    ];
+
+    function signup() {
+        const firstName = document.getElementById('signup-first-name').value.trim();
+        const lastName = document.getElementById('signup-last-name').value.trim();
+        const email = document.getElementById('signup-email').value.trim();
+        const mobile = document.getElementById('signup-mobile').value.trim();
+        const password = document.getElementById('signup-password').value.trim();
+        const repassword = document.getElementById('signup-repassword').value.trim();
+        const messageElement = document.getElementById('signup-message');
+
+        if (password !== repassword) {
+            messageElement.innerHTML = '<span style="color: red;">Passwords do not match!</span>';
+            return;
+        }
+
+        if (users.find(u => u.email === email)) {
+            messageElement.innerHTML = '<span style="color: red;">Email already exists!</span>';
+        } else {
+            users.push({ username: email, password, email });
+            messageElement.innerHTML = '<span style="color: green;">Signup successful! You can now <a href="login.html">Login</a></span>';
+        }
+    }
+</script>
+
+</body>
+</html>
