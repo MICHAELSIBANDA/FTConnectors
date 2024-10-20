@@ -515,7 +515,7 @@ h2 {
 
 .header-slider .header-slider-caption p {
     text-align: center;
-    color: #ffffff;
+    color: green;
     font-size: 22px;
     font-family: 'Source Code Pro', monospace;
     font-weight: 700;
@@ -561,7 +561,7 @@ h2 {
     height: 100%;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(205, 205, 205, 0), rgba(255, 255, 255, 0.5));
+    background: linear-gradient(to right, #d6eaf8, #f5f5dc);
     transition: all 0.3s;
     opacity: 0;
 }
@@ -575,7 +575,7 @@ h2 {
     padding: 15px;
     width: 100%;
     text-align: center;
-    color: hwb(124 16% 100%);
+    color: hwb(134 5% 14%);
     font-size: 20px;
     transition: all 0.3s;
     
@@ -2137,6 +2137,7 @@ h2 {
     font-size: 14px;
     letter-spacing: 2px;
     margin-bottom: 5px;
+    color: green;
 }
 
 .review .review-text p {

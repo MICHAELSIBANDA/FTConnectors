@@ -133,7 +133,7 @@
                     <div class="col-md-3">
                         <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
                             <a class="nav-link active" id="dashboard-nav" data-toggle="pill" href="#dashboard-tab" role="tab"><i class="fa fa-tachometer-alt"></i>Dashboard</a>
-                            <a class="nav-link" id="orders-nav" data-toggle="pill" href="#orders-tab" role="tab"><i class="fa fa-shopping-bag"></i>Orders</a>
+                            <a class="nav-link" id="orders-nav" data-toggle="pill" href="#orders-tab" role="tab"><i class="fa fa-shopping-bag"></i>Monthly Report</a>
                             <a class="nav-link" id="payment-nav" data-toggle="pill" href="#payment-tab" role="tab"><i class="fa fa-credit-card"></i>Payment Method</a>
                             <a class="nav-link" id="address-nav" data-toggle="pill" href="#address-tab" role="tab"><i class="fa fa-map-marker-alt"></i>address</a>
                             <a class="nav-link" id="account-nav" data-toggle="pill" href="#account-tab" role="tab"><i class="fa fa-user"></i>Account Details</a>
@@ -145,7 +145,7 @@
                             <div class="tab-pane fade show active" id="dashboard-tab" role="tabpanel" aria-labelledby="dashboard-nav">
                                 <h4>Dashboard</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In condimentum quam ac mi viverra dictum. In efficitur ipsum diam, at dignissim lorem tempor in. Vivamus tempor hendrerit finibus. Nulla tristique viverra nisl, sit amet bibendum ante suscipit non. Praesent in faucibus tellus, sed gravida lacus. Vivamus eu diam eros. Aliquam et sapien eget arcu rhoncus scelerisque.
+                                    Our deshboard is a visual display that presents key performance indicators (KPIs), metrics, and data points in a consolidated and easy-to-understand format. It allows users to quickly monitor and analyze information, helping them to make informed decisions based on real-time data.    
                                 </p> 
                             </div>
                             <div class="tab-pane fade" id="orders-tab" role="tabpanel" aria-labelledby="orders-nav">
@@ -154,37 +154,38 @@
                                         <thead class="thead-dark">
                                             <tr>
                                                 <th>No</th>
-                                                <th>Product</th>
+                                                <th>Month</th>
                                                 <th>Date</th>
-                                                <th>Price</th>
-                                                <th>Status</th>
+                                                <th>No of Bookins</th>
+                                                <th>Rewards</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
-                                                <td>Product Name</td>
-                                                <td>01 Jan 2020</td>
-                                                <td>$99</td>
-                                                <td>Approved</td>
-                                                <td><button class="btn">View</button></td>
+                                                <td>June</td>
+                                                <td>01 JUN 2024</td>
+                                                <td>11</td>
+                                                <td>4</td>
+                                                <td><a href="img/june report.pdf" class="btn">Download Report</a>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>2</td>
-                                                <td>Product Name</td>
-                                                <td>01 Jan 2020</td>
-                                                <td>$99</td>
-                                                <td>Approved</td>
-                                                <td><button class="btn">View</button></td>
+                                                <td>Jully</td>
+                                                <td>01 JUL 202$</td>
+                                                <td>7</td>
+                                                <td>3</td>
+                                                <td><a href="/img/june report.pdf" class="btn">Download Report</td>
                                             </tr>
                                             <tr>
                                                 <td>3</td>
-                                                <td>Product Name</td>
-                                                <td>01 Jan 2020</td>
-                                                <td>$99</td>
-                                                <td>Approved</td>
-                                                <td><button class="btn">View</button></td>
+                                                <td> September</td>
+                                                <td>01 SEP 2024</td>
+                                                <td>3</td>
+                                                <td>1</td>
+                                                <td><a href="/img/summer report.pdf" class="btn">Download Report</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -192,9 +193,14 @@
                             </div>
                             <div class="tab-pane fade" id="payment-tab" role="tabpanel" aria-labelledby="payment-nav">
                                 <h4>Payment Method</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In condimentum quam ac mi viverra dictum. In efficitur ipsum diam, at dignissim lorem tempor in. Vivamus tempor hendrerit finibus. Nulla tristique viverra nisl, sit amet bibendum ante suscipit non. Praesent in faucibus tellus, sed gravida lacus. Vivamus eu diam eros. Aliquam et sapien eget arcu rhoncus scelerisque.
-                                </p> 
+                                <ul>
+                                    <li><strong>PayPal</strong>: A secure online payment platform that allows users to make transactions using their PayPal balance, linked bank accounts, or credit/debit cards.</li>
+                                    <li><strong>Payoneer</strong>: An international financial services platform that enables businesses and individuals to send and receive payments globally, often used for freelance work or cross-border trade.</li>
+                                  `----------------------------  <li><strong>Check Payment</strong>: A traditional payment method where the payer writes a check that the payee can deposit into their bank account for later processing.</li>
+                                    <li><strong>Direct Bank Transfer</strong>: A method where funds are transferred directly from the payer’s bank account to the payee’s account, typically through online banking or a bank branch.</li>
+                                    <li><strong>Cash on Arrival (COD)</strong>: A payment method where the buyer pays for goods or services at the time of delivery, usually in cash.</li>
+                                  </ul>
+                                  
                             </div>
                             <div class="tab-pane fade" id="address-tab" role="tabpanel" aria-labelledby="address-nav">
                                 <h4>Address</h4>
